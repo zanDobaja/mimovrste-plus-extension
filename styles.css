@@ -1,0 +1,118 @@
+/* Mimovrste+ Native Blending Styles */
+
+/* Allow sort tabs to fit on one row on desktop and wrap gracefully on smaller screens */
+.sort-header__desktop .sort__wrap {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+@media (min-width: 1024px) and (max-width: 1480px) {
+  .sort-header__desktop .sort__item__button {
+    padding: 0 11px !important;
+  }
+}
+
+/* When a Mimovrste+ custom sort tab is active, suppress the active indicator on the default Nuxt tab without mutating Vue's internal vdom classes */
+.sort__wrap.mvplus-custom-sort-active .sort__item__button--active:not([data-mvplus-active="true"]) {
+  font-weight: 400 !important;
+  color: #3d4951 !important;
+}
+
+.sort__wrap.mvplus-custom-sort-active .sort__item__button--active:not([data-mvplus-active="true"])::after {
+  display: none !important;
+  border-bottom: none !important;
+}
+
+/* Ensure custom sort tab has exact native active underline */
+.sort-header-fully .sort__item__button[data-mvplus-active="true"] {
+  font-weight: 700 !important;
+  color: #0f73ee !important;
+}
+
+.sort-header-fully .sort__item__button[data-mvplus-active="true"]::after {
+  border-bottom: 3px solid #0f73ee !important;
+  bottom: -1px;
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* Mobile sort modal (.psm) active override */
+.psm.mvplus-custom-sort-active .psm__item--active:not([data-mvplus-active="true"]) {
+  font-weight: 400 !important;
+  color: inherit !important;
+}
+
+.psm.mvplus-custom-sort-active .psm__item--active:not([data-mvplus-active="true"])::after {
+  display: none !important;
+}
+
+/* Hidden product cards when filtered */
+.mvplus-hidden-card {
+  display: none !important;
+}
+
+/* Subtle native-looking link inside product count for loading additional pages */
+.mvplus-load-more-link {
+  color: #0f73ee;
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.mvplus-load-more-link:hover {
+  text-decoration: underline;
+}
+
+.mvplus-status-note {
+  color: #6b767e;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* Native sidebar filter accordion spacing & checkbox state */
+.mvplus-sidebar-filter {
+  border-bottom: 1px solid #e7eaed;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.mvplus-sidebar-filter .drop-down__trigger {
+  cursor: pointer;
+  user-select: none;
+}
+
+.mvplus-sidebar-filter.mvplus-collapsed .drop-down__drawer {
+  display: none !important;
+}
+
+.mvplus-sidebar-filter.mvplus-collapsed .product-filter__item__icon-arrow {
+  transform: rotate(0deg) !important;
+}
+
+.mvplus-sidebar-filter:not(.mvplus-collapsed) .product-filter__item__icon-arrow {
+  transform: rotate(180deg);
+}
+
+/* Native checkbox active appearance fallback if Nuxt CSS uses scoped attributes */
+.mvplus-sidebar-filter label.checkbox input[type="checkbox"]:checked + .checkbox__box {
+  background-color: #0f73ee !important;
+  border-color: #0f73ee !important;
+  position: relative;
+}
+
+.mvplus-sidebar-filter label.checkbox input[type="checkbox"]:checked + .checkbox__box::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
