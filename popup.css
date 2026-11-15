@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  width: 320px;
+  background-color: #f8f9fa;
+  color: #2b353c;
+}
+
+.popup-container {
+  padding: 16px;
+}
+
+.popup-header {
+  border-bottom: 1px solid #e2e6ea;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #e31e24;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.popup-header h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f272d;
+}
+
+.popup-header p {
+  font-size: 12px;
+  color: #6b767e;
+}
+
+.settings-section {
+  background: #ffffff;
+  border: 1px solid #e7eaed;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.settings-section h2 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #5c6870;
+  margin-bottom: 10px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-row + .toggle-row {
+  border-top: 1px solid #f1f3f5;
+}
+
+.toggle-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #0f73ee;
+  cursor: pointer;
+}
+
+.section-hint {
+  font-size: 12px;
+  color: #6b767e;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.select-input {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #2b353c;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.select-input:focus {
+  border-color: #0f73ee;
+}
+
+.popup-footer {
+  text-align: center;
+  padding-top: 2px;
+}
+
+.save-status {
+  font-size: 11px;
+  color: #6b767e;
+}
+
+.save-status.saved {
+  color: #0f73ee;
+  font-weight: 600;
+}
