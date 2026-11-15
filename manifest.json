@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Mimovrste+ (Napredno razvrščanje in filtri)",
+  "version": "1.0.0",
+  "description": "Doda naravno razvrščanje po številu ocen, najboljših ocenah, največjem popustu ter dodatne filtre na Mimovrste.com.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.mimovrste.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mimovrste+ nastavitve",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mimovrste.com/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
