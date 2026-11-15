@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Mimovrste+ Nastavitve</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo-wrap">
+        <span class="logo-badge">M+</span>
+        <div>
+          <h1>Mimovrste+</h1>
+          <p>Napredno razvrščanje in filtri</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="settings-section">
+      <h2>Dodatni zavihki za razvrščanje</h2>
+      <label class="toggle-row">
+        <span>Največ ocen</span>
+        <input type="checkbox" id="enableSortReviews" checked>
+      </label>
+      <label class="toggle-row">
+        <span>Najbolje ocenjeno (★ + št. ocen)</span>
+        <input type="checkbox" id="enableSortRating" checked>
+      </label>
+      <label class="toggle-row">
+        <span>Največji popust (%)</span>
+        <input type="checkbox" id="enableSortDiscountPct" checked>
+      </label>
+      <label class="toggle-row">
+        <span>Največji prihranek (€)</span>
+        <input type="checkbox" id="enableSortDiscountEur">
+      </label>
+    </section>
+
+    <section class="settings-section">
+      <h2>Stranski filtri</h2>
+      <label class="toggle-row">
+        <span>Sklop »Ocene in ponudba« v levem stolpcu</span>
+        <input type="checkbox" id="enableSidebarFilters" checked>
+      </label>
+    </section>
+
+    <section class="settings-section">
+      <h2>Globina preiskovanja kategorije</h2>
+      <p class="section-hint">
+        Koliko strani kategorije naj razširitev samodejno združi in preišče ob razvrščanju:
+      </p>
+      <select id="maxPagesToFetch" class="select-input">
+        <option value="1">Samo trenutna stran (1 stran)</option>
+        <option value="3">Do 3 strani (~100 izdelkov)</option>
+        <option value="5" selected>Do 5 strani (~180 izdelkov – priporočeno)</option>
+        <option value="8">Do 8 strani (~280 izdelkov)</option>
+        <option value="12">Do 12 strani (~430 izdelkov)</option>
+      </select>
+    </section>
+
+    <footer class="popup-footer">
+      <span id="saveStatus" class="save-status">Nastavitve se shranjujejo samodejno</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
